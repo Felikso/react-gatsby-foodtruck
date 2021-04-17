@@ -38,6 +38,7 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-transformer-json`,
+    'gatsby-plugin-loadable-components-ssr',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

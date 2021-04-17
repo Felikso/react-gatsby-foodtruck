@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
+
+import StyledBackgroundEmailSection from './StyledBackgroundEmailSection'
 import EmailBg from '../assets/images/email-1.jpg'
 import { Button } from "../components/Button"
+
 
 //transitions
 import Aos from 'aos';
@@ -14,12 +17,13 @@ function Email() {
         });
     }, [])
     return (
-        <EmailContainer
-        data-aos="fade-up"   
+
+        <StyledBackgroundEmailSection>
+
+            <EmailContent          data-aos="fade-in"   
         data-aos-offset="200"
         data-aos-delay="0"
-        >
-            <EmailContent>
+>
                 <h3>Uzyskaj dostęp do powiadomień o zbliżających się ofertach specjalnych</h3>
                 <p>Zapisz się do naszego newslettera, żeby być na bieżąco!</p>
                 <form action="#">
@@ -49,7 +53,9 @@ function Email() {
                 </FormWrap>
                 </form>
             </EmailContent>
-        </EmailContainer>
+ 
+      </StyledBackgroundEmailSection>
+       
     )
 }
 
@@ -61,8 +67,7 @@ const EmailContainer = styled.div`
         rgba(0,0,0,0.5) 0%, 
         rgba(0,0,0,0.5) 35%,
         rgba(0,0,0,1) 100% 
-        ),
-        url(${EmailBg}) no-repeat center;
+        );
         background-size: cover;
     height: 450px;
     width: 100%;
@@ -74,9 +79,18 @@ const EmailContainer = styled.div`
 `
 
 const EmailContent = styled.div`
+    height: 100%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        180deg, 
+        rgba(0,0,0,0.5) 0%, 
+        rgba(0,0,0,0.5) 35%,
+        rgba(0,0,0,1) 100% 
+        );
 
     h3 {
         text-align: center;

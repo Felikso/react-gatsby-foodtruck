@@ -4,12 +4,15 @@ import styled from 'styled-components'
 import { Button } from "../components/Button"
 import Video from '../assets/videos/pierogi1.mp4'
 
+import StyledBackgroundHeroSection from './StyledBackgroundHeroSection'
+
 function Hero() {
     return (
+        
         <HeroContainer>
-            <HeroBg>
+            <HeroBg><StyledBackgroundHeroSection />
                 <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline />
-            </HeroBg>
+               </HeroBg>
             <HeroContent>
                 <HeroItems>
                     <HeroH1>
@@ -77,6 +80,10 @@ const VideoBg = styled.video`
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 const HeroContent = styled.div`
