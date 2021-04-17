@@ -11,6 +11,7 @@
     "gatsby": "^3.2.1",
     "gatsby-background-image": "^1.5.0",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
+    "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-loadable-components-ssr": "^2.1.0",
     "gatsby-plugin-manifest": "^3.2.0",
