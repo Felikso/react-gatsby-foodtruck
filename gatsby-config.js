@@ -49,18 +49,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-htaccess',
       options: {
-        RewriteBase: '/custom/',
+        RewriteBase: true,
         https: true,
         www: true,
         SymLinksIfOwnerMatch: true,
         host: 'projekty.ventus-trade.pl',
-        redirect: [
-          'RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]',
-          {
-            from: 'http:projekty.ventus-trade.pl',
-            to: 'https:projekty.ventus-trade.pl',
-          },
-        ],
       },
     },
   ],
