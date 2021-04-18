@@ -54,6 +54,10 @@ module.exports = {
         www: true,
         SymLinksIfOwnerMatch: true,
         host: 'www.projekty.ventus-trade.pl',
+        custom: `
+             RewriteCond %{HTTP_HOST} ^projekty.ventus-trade.pl [NC]
+             RewriteRule ^(.*)$ https://www.projekty.ventus-trade.pl/$1 [L,R=301,NC]
+        `,
       },
     },
   ],
