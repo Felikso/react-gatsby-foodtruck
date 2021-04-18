@@ -53,7 +53,7 @@ module.exports = {
         https: true,
         www: true,
         SymLinksIfOwnerMatch: true,
-        host: 'projekty.ventus-trade.pl',
+        host: 'www.projekty.ventus-trade.pl',
       },
     },
   ],
