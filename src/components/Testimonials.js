@@ -16,7 +16,7 @@ export default function Testimonials() {
     }, [])
     const data = useStaticQuery(graphql`
     query {
-  allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, name: {in: ["polecane-1", "polecane-3"]}}) {
+  allFile(filter: {ext: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "featured"}}) {
     edges {
       node {
         childImageSharp {

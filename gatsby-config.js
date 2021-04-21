@@ -56,5 +56,39 @@ module.exports = {
         host: 'www.projekty.ventus-trade.pl',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `products`,
+        path: `${__dirname}/src/products`,
+      },
+    },
+    `gatsby-plugin-page-transitions`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500
+      }
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `dataProducts`,
+        path: `${__dirname}/src/dataProducts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `dataMenu`,
+        path: `${__dirname}/src/dataMenu`,
+      },
+    },
+
+
+    `gatsby-transformer-ffmpeg`
+
   ],
 }

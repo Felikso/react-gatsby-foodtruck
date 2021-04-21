@@ -9,6 +9,7 @@ import Testimonials from "../components/Testimonials"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
 import FullWidthSection from '../components/FullWidthSection';
+import FeaturedProductsBox from '../containers/FeaturedProductsBox';
 
 function IndexPage() {
   const halfPage = useRef();
@@ -21,7 +22,7 @@ function IndexPage() {
       <Hero />
       {hasScrolled || isScrolling ? (
         <>
-      <OfferIntro heading="Serdecznie polecamy" />
+      <FeaturedProductsBox heading="Serdecznie polecamy" />
       <Testimonials />
       <Stats />
       <Email />

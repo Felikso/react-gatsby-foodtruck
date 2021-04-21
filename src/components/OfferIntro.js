@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+/* import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage} from "gatsby-plugin-image"
@@ -166,3 +166,4 @@ const OfferName = styled.div`
 `
 
 
+ */

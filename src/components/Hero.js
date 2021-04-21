@@ -11,7 +11,7 @@ function Hero() {
         
         <HeroContainer>
             <HeroBg><StyledBackgroundHeroSection />
-                <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline />
+                <VideoBg src={Video} poster="https://th.bing.com/th/id/R579b4552f248f5f3b8c22ec8de678f6d?rik=CZn5ZpmoPRhhWA&riu=http%3a%2f%2f1.s.dziennik.pl%2fpliki%2f2465000%2f2465139-lew-900-665.jpg&ehk=rOGUdngXo%2b2ZE6G%2bXYh1k730AK3lbwEv%2fptsUHZ6DK4%3d&risl=&pid=ImgRaw" type="video/mp4" autoPlay loop muted playsInline />
                </HeroBg>
             <HeroContent>
                 <HeroItems>
@@ -88,7 +88,7 @@ const VideoBg = styled.video`
 
 const HeroContent = styled.div`
     z-index: 3;
-    heightL calc(100vh - 80px);
+    height: calc(100vh - 80px);
     max-height: 100%;
     padding: 0rem calc((100vh - 1300px) /2);    
 `

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Burger from './Burger';
 import { Link } from 'gatsby'
 import { Button } from '../Button'
+import SvgLSLogo from './SvgLSLogo'
 
 const Nav = styled.nav`
 background: transparent;
@@ -41,7 +42,7 @@ const NavBtn = styled.div`
 const Navbar = () => {
   return (
     <Nav>
-      <NavLink to="/">LS</NavLink>
+      <NavLink to="/"><SvgLSLogo /></NavLink>
       <Burger />
       <NavBtn>
         <Button primary="true" round="true" to="/menu">

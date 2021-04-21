@@ -20,9 +20,10 @@ function Email() {
 
         <StyledBackgroundEmailSection>
 
-            <EmailContent          data-aos="fade-in"   
-        data-aos-offset="200"
-        data-aos-delay="0"
+            <EmailContent          
+            data-aos="fade-in"   
+            data-aos-offset="200"
+            data-aos-delay="0"
 >
                 <h3>Uzyskaj dostęp do powiadomień o zbliżających się ofertach specjalnych</h3>
                 <p>Zapisz się do naszego newslettera, żeby być na bieżąco!</p>
