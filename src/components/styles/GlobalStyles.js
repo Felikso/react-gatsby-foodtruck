@@ -14,6 +14,24 @@ export const GlobalStyle = createGlobalStyle`
     --contact-to: green;
 
     --contact-to-hover: blue;
+
+
+    /* menuCard */
+
+    --menu-box-bg: transparent;
+
+    --menu-box-bg-hover: transparent;
+
+    --menu-box-border: #808080;
+
+    --menu-dish-name-color: #8c0000;
+
+    --menu-dish-q-color: black;
+
+    --menu-dish-desc-color: #000000;
+
+    --menu-dish-price-color: #0c4e00;
+
   }
 
     * {

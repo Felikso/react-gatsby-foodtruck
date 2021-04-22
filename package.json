@@ -24,6 +24,8 @@
     "gatsby-plugin-sharp": "^3.2.0",
     "gatsby-plugin-styled-components": "^4.2.0",
     "gatsby-source-filesystem": "^3.2.0",
+    "gatsby-source-graphql": "^2.14.0",
+    "gatsby-source-wordpress": "^5.3.1",
     "gatsby-transformer-ffmpeg": "^0.3.8",
     "gatsby-transformer-json": "^3.3.0",
     "gatsby-transformer-sharp": "^3.2.0",
@@ -39,6 +41,7 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
+    "gatsby-plugin-graphql-image": "^1.0.1",
     "prettier": "2.2.1"
   },
   "keywords": [
