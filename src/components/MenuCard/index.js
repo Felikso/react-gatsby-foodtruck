@@ -154,22 +154,30 @@ if(dishCategory == "wszystkie"){
 
   categories = ["wszystkie", ...categories];
 
-  categories = categories.map((item, index) => (
+/*   categories = categories.map((item, index) => (
     <option key={index} value={item}>
       {item}
     </option>
-  ));
+  )); */
 
     return (
         <>
 
-<select>
+{/* <select
+onClick={ e => setDishCategory(e.target.value)}
+>
   {categories}
-</select>
+</select> */}
+<MenuButtonBox>
+{
+  categories.map((item, i) => (
+    <MenuButton key={i} value={item} onClick={ e => setDishCategory(e.target.value)}>{item}</MenuButton>
+  ))
+}
 
-<button value="zupy" onClick={ e => setDishCategory(e.target.value)}>zupy</button>
-<button value="wszystkie" onClick={ e => setDishCategory(e.target.value)}>wszystkie</button>
-<button value="pierogi" onClick={ e => setDishCategory(e.target.value)}>pierogi</button>
+</MenuButtonBox>
+
+
 {filteredNodeDish.map((item, i) => (
               <MenuBox
               data-aos="fade-in"   
@@ -267,6 +275,38 @@ const DishPrice = styled.span`
   font-size: clamp(1.5rem, 5vw, 2rem);
   align-items: center;
   white-space: nowrap;
+  `
 
+const MenuButton = styled.button`
+
+    backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(0deg,#00003e 0%,#000000 54.433428555424854%,#786721 100%);
+  border-radius: 08px;
+  border: 0px solid #444;
+  border-width: 0px 0px 0px 0px;
+  padding: 10px 20px 10px 20px;
+    color: #fff;
+  font-size: 16px;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-style: normal;
+  transition: 1s;
+
+
+  &:focus {
+    color: var(--color-4);
+  }
+ 
+`
+
+const MenuButtonBox = styled.div`
+
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+  margin: 20px 0;
 
 `

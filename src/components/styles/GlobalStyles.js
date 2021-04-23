@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-1: rgb(0, 0, 62);
     --color-2: rgb(120, 103, 33);
     --color-3: rgb(150, 11, 11);
+    --color-4: #0c4e00;
 
     --font-1: rgb(255, 255, 255);
 

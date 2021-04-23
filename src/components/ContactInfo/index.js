@@ -17,7 +17,7 @@ function ContactInfo() {
     }, [])
     return (
         <ContactContainer>
-            <ContactHeading>Czemu tak chętnie jesz właśnie u nas?</ContactHeading>
+            <ContactHeading>Serdecznie zapraszamy do kontaktu</ContactHeading>
             <ContactWrapper>
                 {ContactData.map((item, index) => (
                 <ContactBox 
