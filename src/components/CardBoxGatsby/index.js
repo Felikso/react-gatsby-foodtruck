@@ -28,24 +28,43 @@ export default function CardBoxGatsby() {
                 }
               }
             }
+
+            HWGraphQL {
+              homeDishes {
+                nodes {
+                  title
+                  featuredImage {
+                    node {
+                      sourceUrl
+                      sourceUrlSharp {
+                        childImageSharp {
+                          gatsbyImageData
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
           
         `
       )
             const allProducts = data.allProductsJson.nodes
 
+            const wpPhotos = data.HWGraphQL.homeDishes.nodes
+
     return (
       <>
 
-{/*   <section class="card-gatsby-box"> */}
 
 {
-    allProducts.map((item, i) => (
+    wpPhotos.map((item, i) => (
       <ImageHoverCapition textH2={item.name} textP={item.description} price={item.price}>
            <GatsbyImage
             className="image-hover-capition__img"
             key={i}
-            image={item.image.childImageSharp.gatsbyImageData}
+            image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
             alt="cos"
       />
       </ImageHoverCapition>
@@ -53,8 +72,7 @@ export default function CardBoxGatsby() {
 
     ))
   }
-
-{/* </section> */}
+<h1>DDDDDDD</h1>
 </>
     )
 }

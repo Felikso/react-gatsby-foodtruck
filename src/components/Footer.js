@@ -2,6 +2,12 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
+import { SiGooglemybusiness, SiMessenger } from 'react-icons/si'
+
+import { ImFacebook2 } from 'react-icons/im' 
+
+import { RiInstagramFill } from 'react-icons/ri' 
+
 //transitions
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -21,7 +27,7 @@ export default function Footer() {
             <FooterLinksWrapper>
                 <FooterDesc>
                     <h3>Lwowskie Smaki</h3>
-                    <p>jakiś cytat</p>
+                    <p>szybko, smacznie, świeżo</p>
                 </FooterDesc>
                 <FooterLinkItems>
                     <FooterLinkTitle>Skontaktuj się z nami</FooterLinkTitle>
@@ -32,10 +38,13 @@ export default function Footer() {
             </FooterLinksWrapper>
             <FooterLinksWrapper>
             <FooterLinkItems>
-                    <FooterLinkTitle>Skontaktuj się z nami</FooterLinkTitle>
-                    <FooterLink to="/kontakt">Kontakt</FooterLink>
-                    <FooterLink to="/o-nas">O nas</FooterLink>
-                    <FooterLink to="/menu">Menu</FooterLink>
+                    <FooterLinkTitle>Znajdź nas w sieci</FooterLinkTitle>
+                    <FooterIconsBox>
+                            <IconHref href="https://www.messenger.com/t/107362521495088"><MessengerIcon /></IconHref>
+                            <GoogleIcon href="#" />
+                            <FacebookIcon href="https://www.facebook.com/lwowskiesmaki" />
+                            <InstagramIcon href="#" />
+                    </FooterIconsBox>
                 </FooterLinkItems>
             </FooterLinksWrapper>
         </FooterContainer>
@@ -100,4 +109,61 @@ const FooterLink = styled(Link)`
     &:hover {
         color: #f26a2e;
     }
+`
+
+const FooterIconsBox = styled.div`
+    display: flex;
+`
+
+const MessengerIcon = styled(SiMessenger)`
+    width: 1.5em;
+    height: 1.5em;
+    margin: 2px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        fill: var(--messenger-icon);
+    }
+}
+`
+
+const GoogleIcon = styled(SiGooglemybusiness)`
+    width: 1.5em;
+    height: 1.5em;
+    margin: 2px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        fill: var(--google-icon);
+    }
+`
+
+const FacebookIcon = styled(ImFacebook2)`
+    width: 1.5em;
+    height: 1.5em;
+    margin: 2px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        fill: var(--facebook-icon);
+    }
+`
+
+const InstagramIcon = styled(RiInstagramFill)`
+    width: 1.5em;
+    height: 1.5em;
+    margin: 2px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        fill: var(--instagram-icon);
+    }
+`
+
+const IconHref = styled.a`
+
 `

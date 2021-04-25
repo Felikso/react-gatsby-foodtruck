@@ -6,11 +6,19 @@ import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import './MenuCard.scss'
 
+import wordpressDishesCoppy from './wordpressDishesCoppy.json'
+
 //transitions
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 function MenuCard() {
+
+
+
+  const wpDataDishes = wordpressDishesCoppy.dataCoppy.HWGraphQL.dishes.nodes
+  console.log('wordpressDishesCoppy')
+  console.log(wpDataDishes) //tu później dodać pętlę if undefiend
 
   const [dishCategory, setDishCategory] = useState("wszystkie")
 

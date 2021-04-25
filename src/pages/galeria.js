@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Hero from '../components/Hero'
 
 import OfferGallery from "../components/OfferGallery"
+import OfferGalleryWp from "../components/OfferGalleryWp"
 import FullWidthSection from '../components/FullWidthSection';
 
 
@@ -18,7 +19,7 @@ function GalleryPage() {
     <Layout>
       <SEO title="Galeria" />
       <Hero />
-      <OfferGallery/>
+      <OfferGalleryWp/>
       {hasScrolled || isScrolling ? (
         <>
 

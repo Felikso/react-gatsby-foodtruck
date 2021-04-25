@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { Button } from "../components/Button"
 import Video from '../assets/videos/pierogi1.mp4'
+import DayOffer from './DayOffer'
 
 import StyledBackgroundHeroSection from './StyledBackgroundHeroSection'
 
@@ -25,6 +26,7 @@ function Hero() {
                         Sprawdź Menu
                     </Button>
                 </HeroItems>
+                <DayOffer />
             </HeroContent>
         </HeroContainer>
     )

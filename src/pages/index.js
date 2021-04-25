@@ -4,7 +4,7 @@ import { useHasBeenVisible } from '../hooks/useVisibility';
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Hero from '../components/Hero'
-import OfferIntro from "../components/OfferIntro"
+/* import OfferIntro from "../components/OfferIntro" */
 import Testimonials from "../components/Testimonials"
 import Stats from "../components/Stats"
 import Email from "../components/Email"

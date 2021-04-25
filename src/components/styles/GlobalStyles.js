@@ -16,6 +16,11 @@ export const GlobalStyle = createGlobalStyle`
 
     --contact-to-hover: blue;
 
+    --messenger-icon: #00B2FF;
+    --facebook-icon: #3b5998;
+    --google-icon: #487fe7;
+    --instagram-icon: #833AB4;
+
 
     /* menuCard */
 

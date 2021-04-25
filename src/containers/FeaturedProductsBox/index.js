@@ -26,11 +26,37 @@ export default function CardBoxGatsby({heading}) {
                 }
               }
             }
+
+            HWGraphQL {
+              homeDishes {
+                nodes {
+                  title
+                  homeDish {
+                      description
+                      id
+                      name
+                      price
+                    }
+                  featuredImage {
+                    node {
+                      sourceUrl
+                      sourceUrlSharp {
+                        childImageSharp {
+                          gatsbyImageData
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
           
         `
       )
             const allProducts = data.allProductsJson.nodes
+
+            const wpPhotos = data.HWGraphQL.homeDishes.nodes
 
 
 const arr = [2, 5, 4, 45, 32, 46, 78, 87, 98, 56, 23, 12];
@@ -48,9 +74,7 @@ const chooseRandom = (arr, num = 1) => {
 };
 
 
-const randomFeatured = chooseRandom(allProducts, 3)
-
-console.log(randomFeatured);
+const randomFeatured = chooseRandom(wpPhotos, 3)
 
     return (
       <>
@@ -59,11 +83,11 @@ console.log(randomFeatured);
             <FeaturedWrapper>
             {
     randomFeatured.map((item, i) => (
-      <ImageHoverCapition textH2={item.name} textP={item.description} price={item.price}>
+      <ImageHoverCapition textH2={item.homeDish.name} textP={item.homeDish.description} price={item.homeDish.price}>
            <GatsbyImage
             className="image-featured-hover-capition__img"
             key={i}
-            image={item.image.childImageSharp.gatsbyImageData}
+            image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
             alt="cos"
       />
       </ImageHoverCapition>
