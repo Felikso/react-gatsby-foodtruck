@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import { useHasBeenVisible } from '../hooks/useVisibility';
-import Layout from "../components/Layout"
+import Layout from "../components/Layout/index.js"
 import SEO from "../components/seo"
 import Hero from '../components/Hero'
 

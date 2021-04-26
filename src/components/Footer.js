@@ -21,7 +21,7 @@ export default function Footer() {
     return (
         <FooterContainer
         data-aos="fade-in"   
-        data-aos-offset="200"
+        data-aos-offset="0"
         data-aos-delay="0"
         >
             <FooterLinksWrapper>
@@ -41,12 +41,19 @@ export default function Footer() {
                     <FooterLinkTitle>Znajdź nas w sieci</FooterLinkTitle>
                     <FooterIconsBox>
                             <IconHref href="https://www.messenger.com/t/107362521495088"><MessengerIcon /></IconHref>
-                            <GoogleIcon href="#" />
-                            <FacebookIcon href="https://www.facebook.com/lwowskiesmaki" />
-                            <InstagramIcon href="#" />
+                            <IconHref href="#"><GoogleIcon /></IconHref>
+                            <IconHref href="https://www.facebook.com/lwowskiesmaki"><FacebookIcon /></IconHref>
+                            <IconHref href="#"><InstagramIcon/></IconHref>
+                            
+                            
                     </FooterIconsBox>
                 </FooterLinkItems>
             </FooterLinksWrapper>
+            <FooterBottomBox>
+                <a>regulamin</a>
+                <a>polityka prywatoności</a>
+                <a>materiały wykorzystane na stronie</a>
+            </FooterBottomBox>
         </FooterContainer>
     )
 }
@@ -56,8 +63,8 @@ const FooterContainer = styled.div`
     padding: 5rem calc((100vw - 1100px) /2);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    color: #000;
-    background: #fafafb;
+    color: var(--footer-color);
+    background: var(--footer-bg);
 `
 
 const FooterLinksWrapper = styled.div`
@@ -73,8 +80,8 @@ const FooterDesc = styled.div`
     padding: 0 2rem;
 
     h3 {
-        margin-bottom: 3reml
-        color: #f26a2e;
+        margin-bottom: 3rem;
+        color: var(--footer-h3-color);
     }
 
     @media screen and (max-width: 400px) {
@@ -103,11 +110,11 @@ const FooterLink = styled(Link)`
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
-    color: #3d3d4e;
+    color: (--footer-link-color);
     transition: 0.3s ease-out;
 
     &:hover {
-        color: #f26a2e;
+        color: (--footer-link-color-hover);
     }
 `
 
@@ -125,7 +132,7 @@ const MessengerIcon = styled(SiMessenger)`
     &:hover {
         fill: var(--messenger-icon);
     }
-}
+
 `
 
 const GoogleIcon = styled(SiGooglemybusiness)`
@@ -165,5 +172,17 @@ const InstagramIcon = styled(RiInstagramFill)`
 `
 
 const IconHref = styled.a`
+    color: var(--footer-icons-color);
 
+    &:visited {
+        color: var(--footer-icons-color); 
+    }
+
+`
+
+const FooterBottomBox = styled.div`
+    background: red;
+    display: flex;
+    width: 100vw;
+    border-top: solid var(--color-2);
 `

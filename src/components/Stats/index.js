@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-import { StatsData } from '../data/StatsData'
+import { StatsData } from '../../data/StatsData'
 
 //transitions
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-
 
 
 function Stats() {
@@ -15,30 +14,16 @@ function Stats() {
             duration: 1000
         });
     }, [])
-
-    console.log(StatsData)
     return (
         <StatsContainer>
             <Heading>Czemu tak chętnie jesz właśnie u nas?</Heading>
             <Wrapper>
                 {StatsData.map((item, index) => (
-                    
                 <StatsBox 
                 key={index}
                 data-aos="fade-in"   
                 data-aos-offset="200"
-                data-aos-delay={100 * item.id}
-                css={`
-                    transition: 1s;
-
-                    &:hover{
-                        border: ${item.solid};
-                    }
-                    &:hover ${Icon}{
-                        background: ${item.color}
-                    }
-
-                 `}
+                data-aos-delay={200 * item.id}
                 >
                     <Icon>{item.icon}</Icon>
                     <Title>{item.title}</Title>
@@ -75,48 +60,28 @@ const Heading = styled.h1`
 const Wrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 3rem;
+    grid-gap: 10px;
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
     }
 
-`
-
-
-
-const Icon = styled.div`
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: transparent;
-`
-
-const StatsBox = styled.div`
-    height: 100%;
-    width: 40vw;
-    padding: 2rem;
-    border: solid var(--stats-border-color);
-    margin: auto 2rem;
-    transition: 1s;
-                        &:hover ${Icon}{
-                        transform: translate(-50%, -50%) rotateY(1.5turn);
-                        color: red !important;
-                    }
-
-    @media screen and (max-width: 768px) {
-        width: 90vw;
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
     }
 
 `
 
+const StatsBox = styled.div`
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+`
+
+const Icon = styled.div`
+    font-size: 3rem;
+    margin-bottom: 1rem;
+`
 const Title = styled.p`
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     margin-bottom: 0.5rem;  
@@ -131,5 +96,5 @@ const Question = styled.p`
 
 const Description = styled.p`
     font-size: clamp(0.6rem, 2.2vw, 1.1rem);
-    line-height: 1.5rem;
+    line-height: 1em;
 `

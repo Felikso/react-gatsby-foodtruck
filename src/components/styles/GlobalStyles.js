@@ -38,6 +38,40 @@ export const GlobalStyle = createGlobalStyle`
 
     --menu-dish-price-color: #0c4e00;
 
+    /* Footer */
+
+    --footer-icons-color: black;
+
+    --footer-bg: #fafafb;
+
+    --footer-color: #000;
+
+    --footer-h3-color: #f26a2e;
+
+    --footer-link-color: #3d3d4e;
+
+    --footer-link-color-hover: #f26a2e;
+
+    /* Stats */
+
+    --stats-border-color: silver;
+
+    --stats-1-icon-color: #047bf1;
+
+    --stats-2-icon-color: #f3a82e;
+
+    --stats-3-icon-color: #f34f2e;
+
+    --stats-4-icon-color: #3af576;
+
+    --stats-icons-hover: blue;
+
+    
+
+
+
+
+
   }
 
     * {
