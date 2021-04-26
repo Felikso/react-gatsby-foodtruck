@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 
 import { useHasBeenVisible } from '../hooks/useVisibility';
 import Layout from "../components/Layout/index.js"
-import SEO from "../components/seo"
-import StyledBackgroundHeroOfferSection from '../components/Backgrounds/StyledBackgroundHeroOfferSection'
+import Seo from "../components/seo"
+/* import StyledBackgroundHeroOfferSection from '../components/Backgrounds/StyledBackgroundHeroOfferSection' */
 
 import HeroOffer from '../components/HeroOffer'
 
@@ -18,7 +18,7 @@ function OfferPage() {
   const isScrolling = useHasBeenVisible(preload);
   return(
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <HeroOffer />
       <CardBoxGatsby/>
       {hasScrolled || isScrolling ? (

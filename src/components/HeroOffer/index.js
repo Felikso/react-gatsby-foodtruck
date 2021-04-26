@@ -18,9 +18,6 @@ function HeroOffer() {
                     <HeroOfferH1>
                         O naszej ofercie
                     </HeroOfferH1>
- {/*                    <HeroOfferP>
-                        Szybko, Smacznie, Świeżo
-                    </HeroOfferP> */}
                     <Button primary="true" round="true" big="true" to="/ofrta">
                         Sprawdź Ofertę
                     </Button>
@@ -122,9 +119,4 @@ const HeroOfferH1 = styled.h1`
     padding: 0 1rem;
 `
 
-const HeroOfferP = styled.p`
-    font-size: clamp(1rem, 3vw, 3rem);
-    margin-bottom: 2rem;
-    font-weight: 400;
-`
 

@@ -19,24 +19,26 @@ export default function Footer() {
         });
     }, [])
     return (
+        <>
         <FooterContainer
         data-aos="fade-in"   
         data-aos-offset="0"
         data-aos-delay="0"
         >
-            <FooterLinksWrapper>
+
                 <FooterDesc>
                     <h3>Lwowskie Smaki</h3>
                     <p>szybko, smacznie, świeżo</p>
                 </FooterDesc>
-                <FooterLinkItems>
+
+
+            <FooterLinksWrapper>
+            <FooterLinkItems>
                     <FooterLinkTitle>Skontaktuj się z nami</FooterLinkTitle>
                     <FooterLink to="/kontakt">Kontakt</FooterLink>
                     <FooterLink to="/o-nas">O nas</FooterLink>
                     <FooterLink to="/menu">Menu</FooterLink>
                 </FooterLinkItems>
-            </FooterLinksWrapper>
-            <FooterLinksWrapper>
             <FooterLinkItems>
                     <FooterLinkTitle>Znajdź nas w sieci</FooterLinkTitle>
                     <FooterIconsBox>
@@ -49,12 +51,17 @@ export default function Footer() {
                     </FooterIconsBox>
                 </FooterLinkItems>
             </FooterLinksWrapper>
-            <FooterBottomBox>
-                <a>regulamin</a>
-                <a>polityka prywatoności</a>
-                <a>materiały wykorzystane na stronie</a>
-            </FooterBottomBox>
+
         </FooterContainer>
+            <FooterBottomBox
+                    data-aos="fade-in"   
+                    data-aos-offset="0"
+                    data-aos-delay="0">
+            <FooterBottomBoxLink>regulamin</FooterBottomBoxLink>
+            <FooterBottomBoxLink>polityka prywatoności</FooterBottomBoxLink>
+            <FooterBottomBoxLink>materiały wykorzystane na stronie</FooterBottomBoxLink>
+        </FooterBottomBox>
+        </>
     )
 }
 
@@ -65,13 +72,19 @@ const FooterContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     color: var(--footer-color);
     background: var(--footer-bg);
+
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
 `
 
 const FooterLinksWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    @media screen and (max-width: 820px) {
+    @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
     }
 `
@@ -181,8 +194,28 @@ const IconHref = styled.a`
 `
 
 const FooterBottomBox = styled.div`
-    background: red;
+    background: var(--footer-bottom-box-bg);
     display: flex;
+    justify-content: center;
     width: 100vw;
-    border-top: solid var(--color-2);
+    border-top: solid var(--footer-bottom-box-border-color);
+
+    @media screen and (max-width: 500px){
+        flex-direction: column;
+        align-items: center;
+    }
+`
+
+const FooterBottomBoxLink = styled(Link)`
+    margin: 10px;
+    color: var(--footer-bottom-box-link-color);
+    cursor: pointer;
+    font-size: 12px;
+    transition: 1s;
+
+
+
+    &:hover {
+        color: var(--footer-bottom-box-link-color-hover);
+    }
 `

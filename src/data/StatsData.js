@@ -1,6 +1,7 @@
 import React from 'react'
 import { GiKnifeFork, GiLion, GiWindSlap } from "react-icons/gi";
 import { FaRegSmileBeam } from "react-icons/fa";
+import { HiEmojiHappy } from "react-icons/hi"
 
 export const StatsData = [
     {
@@ -13,6 +14,7 @@ export const StatsData = [
             left: 50%;
             transform: translate(-50%,-50%);
             `}
+            className="stats--icon"
             />),
         title: "Domowe smaki",
         question: "Jesteś daleko od Domu? ",
@@ -30,6 +32,7 @@ export const StatsData = [
             left: 50%;
             transform: translate(-50%,-50%);
             `}
+            className="stats--icon"
             />),
         title: "Szybki serwis",
         question: "Masz dość śmieciowego jedzenia?",
@@ -46,13 +49,15 @@ export const StatsData = [
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            
 
             &:hover {
                 color: var(--stats-border-color); 
             }
             `}
+            className="stats--icon"
             />),
-        title: "Wschodni klimat",
+        title: "Wschodni klimacik",
         question: "Chcesz poszerzyć gamę Własnych smaków?",
         desc: "Z przyjemnością częstujemy Cię wschodnimy kulinariami.",
         solid: "solid var(--stats-3-icon-color)",
@@ -60,7 +65,7 @@ export const StatsData = [
     },
     {
         id: 4,
-        icon: (<FaRegSmileBeam
+        icon: (<HiEmojiHappy
             css={`
             color: var(--stats-4-icon-color);
             position: absolute;
@@ -68,6 +73,7 @@ export const StatsData = [
             left: 50%;
             transform: translate(-50%,-50%);
             `}
+            className="stats--icon"
             />),
         title: "Gwranatowane zadowolenie",
         question: "Doskwiera Ci gorszy nastrój?",

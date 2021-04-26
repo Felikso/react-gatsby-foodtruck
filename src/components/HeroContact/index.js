@@ -18,9 +18,6 @@ function HeroContact() {
                     <HeroContactH1>
                         Kontakt
                     </HeroContactH1>
- {/*                    <HeroContactP>
-                        Szybko, Smacznie, Świeżo
-                    </HeroContactP> */}
                     <Button primary="true" round="true" big="true" to="/menu">
                         Sprawdź menu
                     </Button>
@@ -121,10 +118,3 @@ const HeroContactH1 = styled.h1`
     letter-spacing: 3px;
     padding: 0 1rem;
 `
-
-const HeroContactP = styled.p`
-    font-size: clamp(1rem, 3vw, 3rem);
-    margin-bottom: 2rem;
-    font-weight: 400;
-`
-

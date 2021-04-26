@@ -171,7 +171,8 @@ module.exports = {
     }, */
 
 
-    `gatsby-transformer-ffmpeg`
+    `gatsby-transformer-ffmpeg`,
+    `gatsby-plugin-smoothscroll`
 
   ],
 }

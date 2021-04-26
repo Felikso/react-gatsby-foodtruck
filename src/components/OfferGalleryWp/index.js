@@ -55,7 +55,6 @@ export default function CardBoxGatsbyWp({heading}) {
           
         `
       )
-            const allPhotos = data.offerPhotos
 
 const wpPhotos = data.HWGraphQL.galleries.nodes
 

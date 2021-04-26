@@ -2,12 +2,8 @@ import React, { useRef } from 'react';
 
 import { useHasBeenVisible } from '../hooks/useVisibility';
 import Layout from "../components/Layout/index.js"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import HeroMenu from '../components/HeroMenu'
-import OfferIntro from "../components/OfferIntro"
-import Testimonials from "../components/Testimonials"
-import Stats from "../components/Stats"
-import Email from "../components/Email"
 import FullWidthSection from '../components/FullWidthSection';
 import MenuCard from '../components/MenuCard'
 
@@ -18,7 +14,7 @@ function MenuPage() {
   const isScrolling = useHasBeenVisible(preload);
   return(
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <HeroMenu />
       <MenuCard/>
       {hasScrolled || isScrolling ? (

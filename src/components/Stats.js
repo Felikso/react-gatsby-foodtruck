@@ -35,12 +35,21 @@ function Stats() {
                         border: ${item.solid};
                     }
                     &:hover ${Icon}{
-                        background: ${item.color}
+                        background: ${item.color};
+                    }
+
+                    &:hover .stats--icon{
+                        color: white;
                     }
 
                  `}
                 >
-                    <Icon>{item.icon}</Icon>
+                    <Icon
+                    css={`
+                    color: ${item.color};
+                    transition: 1s;
+
+                 `}>{item.icon}</Icon>
                     <Title>{item.title}</Title>
                     <Question>{item.question}</Question>
                     <Description>{item.desc}</Description>
@@ -56,7 +65,8 @@ function Stats() {
 export default Stats
 
 const StatsContainer = styled.div`
-    width: 100%;
+    width: 90vw;
+    margin: auto;
     background: #fcfcfc;
     color: #000;
     display: flex;
@@ -103,16 +113,21 @@ const StatsBox = styled.div`
     height: 100%;
     width: 40vw;
     padding: 2rem;
+    transition: 1s !important;
+    background: var(--stats-box-bg);
     border: solid var(--stats-border-color);
     margin: auto 2rem;
-    transition: 1s;
+
+    &:hover {
+        background: var(--stats-box-bg-hover);
+    }
                         &:hover ${Icon}{
                         transform: translate(-50%, -50%) rotateY(1.5turn);
                         color: red !important;
                     }
 
     @media screen and (max-width: 768px) {
-        width: 90vw;
+        width: 80vw;
     }
 
 `

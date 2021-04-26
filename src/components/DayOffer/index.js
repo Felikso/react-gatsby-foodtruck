@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import {  GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 //transitions
@@ -52,7 +51,8 @@ export default function DayOffer({heading}) {
     DayOffer.map((item, i) => (
         
 
-           <DayOfferBox>
+           <DayOfferBox
+           key={i}>
             <DayOfferHead>
                 <DayOfferDayName>
                     {item.DayOffer.dayname}
@@ -102,7 +102,7 @@ const DayOfferHeading = styled.div`
 `
 
 
-const DayOfferWrapper = styled.div`
+/* const DayOfferWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
@@ -115,11 +115,8 @@ const DayOfferWrapper = styled.div`
         width: 80vw;
         margin: auto;
     }
-`
+` */
 
-const AOSBox = styled.div`
-    display:flex;
-`
 
 const DayOfferHead = styled.div`
     text-align: right;

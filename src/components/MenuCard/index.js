@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+import {  GatsbyImage } from 'gatsby-plugin-image'
 
 import './MenuCard.scss'
 
@@ -13,12 +13,6 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 function MenuCard() {
-
-
-
-  const wpDataDishes = wordpressDishesCoppy.dataCoppy.HWGraphQL.dishes.nodes
-  console.log('wordpressDishesCoppy')
-  console.log(wpDataDishes) //tu później dodać pętlę if undefiend
 
   const [dishCategory, setDishCategory] = useState("wszystkie")
 
@@ -98,12 +92,11 @@ function MenuCard() {
       
     `
   )
-  const allProducts = data.allMenuJson.nodes
+
 
 
   const wordpressDishes = data.HWGraphQL.dishes.nodes
 
-  const wordpressDishesCat = data.HWGraphQL.dishes.nodes.dishes
 
   const getUnique = (items, value) => {
     return [...new Set(items.map(item => item[value]))].filter(function (el) {
@@ -122,8 +115,8 @@ function MenuCard() {
         // transform values
     
         // filtruj category
-        if (category !== "wszystkie") {
-          currentDishes = currentDishes.filter(product => product.category === category);
+        if (category !=== "wszystkie") {
+          currentDishes = currentDishes.filter(product => product.category ==== category);
         }
 
         this.setState({
@@ -136,27 +129,16 @@ function MenuCard() {
   const nodeDish = wordpressDishes.map(item => item.dishes)
 
 
-/*   const filteredNodeDish = wordpressDishes.map(item => item.dishes).filter(item => item.category == dishCategory) */
+/*   const filteredNodeDish = wordpressDishes.map(item => item.dishes).filter(item => item.category === dishCategory) */
 
 let filteredNodeDish = wordpressDishes
 
-if(dishCategory == "wszystkie"){
-  filteredNodeDish = wordpressDishes.filter(item => item.dishes.category == item.dishes.category)
+if(dishCategory === "wszystkie"){
+  filteredNodeDish = wordpressDishes.filter(item => item.dishes.category === item.dishes.category)
 }else{
-  filteredNodeDish = wordpressDishes.filter(item => item.dishes.category == dishCategory)
+  filteredNodeDish = wordpressDishes.filter(item => item.dishes.category === dishCategory)
 }
 
-
-
-  console.log(filteredNodeDish)
-
-/*   console.log(dishCategory) */
-
-  let dishCat = getUnique(nodeDish, "category")
-
-  console.log(wordpressDishes)
-
-  let currentDishes = [...wordpressDishes];
 
   let categories = getUnique(nodeDish, "category");
 

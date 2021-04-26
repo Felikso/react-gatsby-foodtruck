@@ -1,13 +1,10 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
-import styled from 'styled-components'
+import {  GatsbyImage} from 'gatsby-plugin-image'
+
 
 import "./CardGatsby.scss"
-import CardGatsby from "./CardGatsby"
 import ImageHoverCapition from './ImageHoverCapition'
-import productsData from '../../dataProducts/products.json'
 
 export default function CardBoxGatsby() {
     const data = useStaticQuery(
@@ -50,7 +47,6 @@ export default function CardBoxGatsby() {
           
         `
       )
-            const allProducts = data.allProductsJson.nodes
 
             const wpPhotos = data.HWGraphQL.homeDishes.nodes
 

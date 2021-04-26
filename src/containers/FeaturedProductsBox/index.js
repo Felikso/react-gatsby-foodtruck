@@ -54,12 +54,11 @@ export default function CardBoxGatsby({heading}) {
           
         `
       )
-            const allProducts = data.allProductsJson.nodes
 
             const wpPhotos = data.HWGraphQL.homeDishes.nodes
 
 
-const arr = [2, 5, 4, 45, 32, 46, 78, 87, 98, 56, 23, 12];
+
 const chooseRandom = (arr, num = 1) => {
    const res = [];
    for(let i = 0; i < num; ){

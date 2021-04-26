@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GiCookingPot, GiCook, GiCoolSpices, GiFoodTruck  } from "react-icons/gi";
+import { GiCook, GiFoodTruck  } from "react-icons/gi";
 
 //transitions
 import Aos from 'aos';
@@ -28,8 +28,6 @@ export default function Testimonials() {
 }
 
     `)
-
-const allImages = data.allFile.edges
 
 console.log(data.allFile.edges)
     return (

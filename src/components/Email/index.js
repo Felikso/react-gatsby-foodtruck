@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import StyledBackgroundEmailSection from '../StyledBackgroundEmailSection'
-import EmailBg from '../../assets/images/email-1.jpg'
+/* import EmailBg from '../../assets/images/email-1.jpg' */
 import { Button } from "../Button"
 
 

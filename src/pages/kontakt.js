@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import { useHasBeenVisible } from '../hooks/useVisibility';
 import Layout from "../components/Layout/index.js"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import HeroContact from '../components/HeroContact'
 
@@ -18,7 +18,7 @@ function ContactPage() {
   const isScrolling = useHasBeenVisible(preload);
   return(
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <HeroContact />
       <ContactInfo/>
       {hasScrolled || isScrolling ? (

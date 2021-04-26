@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import StyledBackgroundEmailSection from './StyledBackgroundEmailSection'
-import EmailBg from '../assets/images/email-1.jpg'
+/* import EmailBg from '../assets/images/email-1.jpg' */
 import { Button } from "../components/Button"
 
 
@@ -62,7 +62,7 @@ function Email() {
 
 export default Email
 
-const EmailContainer = styled.div`
+/* const EmailContainer = styled.div`
     background: linear-gradient(
         180deg, 
         rgba(0,0,0,0.5) 0%, 
@@ -77,7 +77,7 @@ const EmailContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`
+` */
 
 const EmailContent = styled.div`
     height: 100%;

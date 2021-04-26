@@ -18,9 +18,6 @@ function HeroMenu() {
                     <HeroMenuH1>
                         Nasze Menu
                     </HeroMenuH1>
- {/*                    <HeroMenuP>
-                        Szybko, Smacznie, Świeżo
-                    </HeroMenuP> */}
                     <Button primary="true" round="true" big="true" to="/ofrta">
                         Sprawdź Ofertę
                     </Button>
@@ -120,11 +117,5 @@ const HeroMenuH1 = styled.h1`
     margin-bottom: 1.5rem;
     letter-spacing: 3px;
     padding: 0 1rem;
-`
-
-const HeroMenuP = styled.p`
-    font-size: clamp(1rem, 3vw, 3rem);
-    margin-bottom: 2rem;
-    font-weight: 400;
 `
 

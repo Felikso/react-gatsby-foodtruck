@@ -40,9 +40,11 @@ export const GlobalStyle = createGlobalStyle`
 
     /* Footer */
 
-    --footer-icons-color: black;
+    --footer-icons-color: #3d3d4e;
 
-    --footer-bg: #fafafb;
+    --footer-title: white;
+
+    --footer-bg: black;
 
     --footer-color: #000;
 
@@ -51,6 +53,16 @@ export const GlobalStyle = createGlobalStyle`
     --footer-link-color: #3d3d4e;
 
     --footer-link-color-hover: #f26a2e;
+
+    --footer-bottom-box-bg: black;
+
+    --footer-bottom-box-link-color: rgb(222,222,222);
+
+    --footer-bottom-box-link-color-hover: rgb(255,255,255);
+
+    --footer-bottom-box-border-color: silver;
+
+    --footer-motto-color: white;
 
     /* Stats */
 
@@ -65,6 +77,10 @@ export const GlobalStyle = createGlobalStyle`
     --stats-4-icon-color: #3af576;
 
     --stats-icons-hover: blue;
+
+    --stats-box-bg: #f2f2f2;
+
+    --stats-box-bg-hover: #fff;
 
     
 
@@ -84,4 +100,21 @@ export const GlobalStyle = createGlobalStyle`
     html, body {
         overflow-x: hidden;
     }
+
+    #scroll-btn {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      transform: translate(-50px, -50px);
+      z-index: 90;
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .display-block {
+      display: block;
+    }
+
 `
