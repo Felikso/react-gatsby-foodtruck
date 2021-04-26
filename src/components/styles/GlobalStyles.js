@@ -82,6 +82,12 @@ export const GlobalStyle = createGlobalStyle`
 
     --stats-box-bg-hover: #fff;
 
+    /* Scroll btn */
+
+    --scroll-top-btn-color: var(--color-1);
+    
+    --scroll-top-btn-color-hover: var(--color-2);
+
     
 
 
