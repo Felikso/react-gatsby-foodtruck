@@ -88,6 +88,7 @@ const randomFeatured = chooseRandom(wpPhotos, 3)
             key={i}
             image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
             alt="cos"
+            loading="eager"
       />
       </ImageHoverCapition>
       
