@@ -1,4 +1,4 @@
-/* import React from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import {  GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
@@ -27,35 +27,32 @@ export default function CardBoxGatsby({heading}) {
               }
             }
 
-            HWGraphQL {
-              homeDishes {
+            allWpHomeDish {
                 nodes {
                   title
-                  homeDish {
-                      description
-                      id
-                      name
-                      price
-                    }
                   featuredImage {
                     node {
-                      sourceUrl
-                      sourceUrlSharp {
+                      localFile {
                         childImageSharp {
                           gatsbyImageData
                         }
                       }
                     }
                   }
+                  homeDish {
+                    description
+                    id
+                    name
+                    price
+                  }
                 }
               }
-            }
           }
           
         `
       )
 
-            const wpPhotos = data.HWGraphQL.homeDishes.nodes
+            const wpPhotos = data.allWpHomeDish.nodes
 
 
 
@@ -86,7 +83,7 @@ const randomFeatured = chooseRandom(wpPhotos, 3)
            <GatsbyImage
             className="image-featured-hover-capition__img"
             key={i}
-            image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
+            image={item.featuredImage.node.localFile.childImageSharp.gatsbyImageData}
             alt="cos"
             loading="eager"
       />
@@ -128,4 +125,3 @@ const FeaturedWrapper = styled.div`
         margin: auto;
     }
 `
- */

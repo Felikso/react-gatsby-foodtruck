@@ -6,10 +6,10 @@ import Seo from "../components/seo"
 import Hero from '../components/HeroSections/Hero'
 /* import OfferIntro from "../components/OfferIntro" */
 import Testimonials from "../components/Testimonials"
-/* import Stats from "../components/Stats" */
+import Stats from "../components/Stats"
 import Email from "../components/Email"
 import FullWidthSection from '../components/FullWidthSection';
-/* import FeaturedProductsBox from '../containers/FeaturedProductsBox'; */
+import FeaturedProductsBox from '../containers/FeaturedProductsBox';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
@@ -60,9 +60,9 @@ const bgImage = convertToBgImage(image);
              />
       {hasScrolled || isScrolling ? (
         <>
-{/*       <FeaturedProductsBox heading="Serdecznie polecamy" /> */}
+      <FeaturedProductsBox heading="Serdecznie polecamy" />
       <Testimonials />
-{/*       <Stats /> */}
+      <Stats />
       <Email />
         </>
       ) : (

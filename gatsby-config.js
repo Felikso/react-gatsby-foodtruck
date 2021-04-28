@@ -86,6 +86,29 @@ module.exports = {
         path: `${__dirname}/src/dataMenu`,
       },
     },
+    {
+			resolve: `gatsby-source-wordpress`,
+			options: {
+				url: "https://blog.ventus-trade.pl/graphql",
+        plugins: [
+          {
+            resolve: `@draftbox-co/gatsby-wordpress-inline-images`,
+            options: {
+              baseUrl: `blog.ventus-trade.pl`,
+              protocol: `https`,
+              useACF: true,
+            }
+          }
+        ]
+			},
+		},
+    {
+			resolve: 'gatsby-plugin-graphql-image',
+			options: {
+				schemaName: "allWpDish",
+				imageFieldName: "sourceUrl"
+			}
+		},
 /*     {
 			resolve: `gatsby-source-graphql`,
 			options: {

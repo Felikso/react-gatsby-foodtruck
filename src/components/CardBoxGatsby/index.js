@@ -1,4 +1,4 @@
-/* import React from 'react'
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import {  GatsbyImage} from 'gatsby-plugin-image'
 
@@ -26,17 +26,14 @@ export default function CardBoxGatsby() {
               }
             }
 
-            HWGraphQL {
-              homeDishes {
-                nodes {
-                  title
-                  featuredImage {
-                    node {
-                      sourceUrl
-                      sourceUrlSharp {
-                        childImageSharp {
-                          gatsbyImageData
-                        }
+            allWpHomeDish {
+              nodes {
+                title
+                featuredImage {
+                  node {
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData
                       }
                     }
                   }
@@ -48,7 +45,7 @@ export default function CardBoxGatsby() {
         `
       )
 
-            const wpPhotos = data.HWGraphQL.homeDishes.nodes
+            const wpPhotos = data.allWpHomeDish.nodes
 
     return (
       <>
@@ -60,7 +57,7 @@ export default function CardBoxGatsby() {
            <GatsbyImage
             className="image-hover-capition__img"
             key={i}
-            image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
+            image={item.featuredImage.node.localFile.childImageSharp.gatsbyImageData}
             alt="cos"
       />
       </ImageHoverCapition>
@@ -72,4 +69,3 @@ export default function CardBoxGatsby() {
 </>
     )
 }
- */

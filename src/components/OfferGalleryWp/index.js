@@ -1,4 +1,4 @@
-/* import React, { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import {  GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
@@ -32,20 +32,17 @@ export default function CardBoxGatsbyWp({heading}) {
       }
     }
   }
-  HWGraphQL {
-    galleries {
-      nodes {
-        featuredImage {
-          node {
-            sourceUrlSharp {
-              childImageSharp {
-                gatsbyImageData
-              }
+  allWpGallery {
+    nodes {
+      featuredImage {
+        node {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
             }
-            sourceUrl
           }
+          title
         }
-        title
       }
     }
   }
@@ -56,7 +53,7 @@ export default function CardBoxGatsbyWp({heading}) {
         `
       )
 
-const wpPhotos = data.HWGraphQL.galleries.nodes
+const wpPhotos = data.allWpGallery.nodes
 
 
 
@@ -77,7 +74,7 @@ const wpPhotos = data.HWGraphQL.galleries.nodes
            <GatsbyImage
 
             key={i}
-            image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
+            image={item.featuredImage.node.localFile.childImageSharp.gatsbyImageData}
             alt={`lwowskie-smaki-oferta-zdjęcie-${i}`}
       />
       
@@ -126,4 +123,3 @@ const AOSBox = styled.div`
 `
 
 
- */

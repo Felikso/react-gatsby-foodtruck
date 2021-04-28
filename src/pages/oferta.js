@@ -7,7 +7,7 @@ import Layout from "../components/Layout/index.js"
 import Seo from "../components/seo"
 
 //
-/* import CardBoxGatsby from '../components/CardBoxGatsby' */
+import CardBoxGatsby from '../components/CardBoxGatsby'
 //
 
 import FullWidthSection from '../components/FullWidthSection';
@@ -57,7 +57,7 @@ const bgImage = convertToBgImage(image);
       
       
       />
-{/*       <CardBoxGatsby/> */}
+      <CardBoxGatsby/>
       {hasScrolled || isScrolling ? (
         <>
 

@@ -1,4 +1,4 @@
-/* import React, { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { StatsData } from '../data/StatsData'
@@ -147,4 +147,4 @@ const Question = styled.p`
 const Description = styled.p`
     font-size: clamp(0.6rem, 2.2vw, 1.1rem);
     line-height: 1.5rem;
-` */
+`

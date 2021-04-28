@@ -22,6 +22,35 @@ function MenuCard() {
     });
 }, [])
 
+
+const data = useStaticQuery(
+  graphql`
+    query {
+      allWpDish {
+    nodes {
+      featuredImage {
+        node {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+      dishes {
+        category
+        description
+        fieldGroupName
+        name
+        price
+        quantity
+      }
+    }
+  }
+    }
+  `
+)
+
 /*   const data = useStaticQuery(
     graphql`
       query {
@@ -96,7 +125,7 @@ function MenuCard() {
 
 /*   const wordpressDishes = data.HWGraphQL.dishes.nodes */
 
-  const wordpressDishes = wordpressDishesCoppy.dataCoppy.HWGraphQL.dishes.nodes
+  const wordpressDishes = data.allWpDish.nodes
 
 
   const getUnique = (items, value) => {
@@ -148,7 +177,7 @@ if(dishCategory === "wszystkie"){
               <DishImg
                   className="image-hover-capition__img"
                   key={i}
-                  image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
+                  image={item.featuredImage.node.localFile.childImageSharp.gatsbyImageData}
                   alt="cos"
                />
 
