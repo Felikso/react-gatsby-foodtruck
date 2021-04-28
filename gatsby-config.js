@@ -86,7 +86,7 @@ module.exports = {
         path: `${__dirname}/src/dataMenu`,
       },
     },
-    {
+/*     {
 			resolve: `gatsby-source-graphql`,
 			options: {
 				// This type will contain remote schema Query type
@@ -104,55 +104,10 @@ module.exports = {
 				schemaName: "hwgraphql",
 				imageFieldName: "sourceUrl"
 			}
-		},
-/*     {
-      resolve: "gatsby-source-graphql",
-      options: {
-        // Arbitrary name for the remote schema Query type
-        typeName: "WORDPRESS",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-        fieldName: "wordpress",
-        // Url to query from
-        url: "https://blog.ventus-trade.pl/graphql",
+		}, */
 
-        refetchInterval: 60,
-      },
-    }, */
-/*     {
-      resolve: 'gatsby-plugin-graphql-image',
-      options: {
-            schemaName: 'WORDPRESS',
-            imageFieldName: 'imageUrl'
-      }
-    }, */
-/*      {
-      resolve: 'gatsby-plugin-graphql-image',
-      options: {
-        images: [
-          {
-            schemaName: 'wordpress',
-            typeName: 'WORDPRESS_UploadFile',
-            fieldName: 'sourceUrl',
-            baseUrl: 'https://blog.ventus-trade.pl/graphql',
-          },
-        ]
-      }
-    },  */
-/*     {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "ROCKETMAKERS",
-        fieldName: "rocketmakers",
-        url: "https://blog.ventus-trade.pl/graphql"
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-graphql-image',
-      options: {
-        schemaName: "ROCKETMAKERS",
-        imageFieldName: "imageUrl"
-      }
-    }, */
+
+
    /*  {
       resolve: `gatsby-source-wordpress`,
       options: {
@@ -163,7 +118,8 @@ module.exports = {
               resolve: `@draftbox-co/gatsby-wordpress-inline-images`,
               options: {
                 baseUrl: `blog.ventus-trade.pl`,
-                protocol: `https`
+                protocol: `https`,
+                useACF: true,
               }
             }
           ]

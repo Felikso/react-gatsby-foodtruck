@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image';
+import { convertToBgImage } from 'gbimage-bridge';
 import { useHasBeenVisible } from '../hooks/useVisibility';
 import Layout from "../components/Layout/index.js"
 import Seo from "../components/seo"
@@ -14,30 +16,22 @@ import StyledHero from '../components/HeroSections/StyledHero'
 
 
 function ContactPage() {
-  const data = useStaticQuery(
+  const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "email-2.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+          placeholderImage: file(relativePath: {eq: "email-1.jpg"}) {
+      childImageSharp {
+      gatsbyImageData(
+          width: 1200, 
+          quality: 60, 
+          webpOptions: {quality: 75})
       }
-    `
-  )
-
-  const imageMobile = data.desktop.childImageSharp.fluid
-  const imageDesktop = data.desktop.childImageSharp.fluid
-
-  const sources = [
-    imageMobile,
-    {
-      ...imageDesktop,
-      media: `(min-width: 491px)`,
-    },
-  ]
+  }
+}
+`
+);
+const image = getImage(placeholderImage);
+const bgImage = convertToBgImage(image);
 
   const halfPage = useRef();
   const preload = useRef();
@@ -50,8 +44,7 @@ function ContactPage() {
     <Layout>
       <Seo title="Home" />
       <StyledHero
-
-      sources={sources}
+      bgImage={bgImage}
       Video={Video}
       HeroPoster="https://th.bing.com/th/id/R579b4552f248f5f3b8c22ec8de678f6d?rik=CZn5ZpmoPRhhWA&riu=http%3a%2f%2f1.s.dziennik.pl%2fpliki%2f2465000%2f2465139-lew-900-665.jpg&ehk=rOGUdngXo%2b2ZE6G%2bXYh1k730AK3lbwEv%2fptsUHZ6DK4%3d&risl=&pid=ImgRaw"
       HeroTitle="Kontakt"

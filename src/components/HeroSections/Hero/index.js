@@ -7,14 +7,18 @@ import Video from '../../../assets/videos/pierogi1.mp4'
 
 import StyledBackgroundHeroSection from '../../StyledBackgroundHeroSection'
 
-import DayOffer from '../../DayOffer'
+import BgImgBridge from '../../BgImgBridge'
 
-function Hero() {
+/* import DayOffer from '../../DayOffer' */
+
+
+
+function Hero({ bgImage }) {
     return (
 
         <HeroBox>
         <HeroContainer>
-            <HeroBg><StyledBackgroundHeroSection />
+            <HeroBg><BgImgBridge bgImage={bgImage}/>
                 <VideoBg src={Video} poster="https://th.bing.com/th/id/R579b4552f248f5f3b8c22ec8de678f6d?rik=CZn5ZpmoPRhhWA&riu=http%3a%2f%2f1.s.dziennik.pl%2fpliki%2f2465000%2f2465139-lew-900-665.jpg&ehk=rOGUdngXo%2b2ZE6G%2bXYh1k730AK3lbwEv%2fptsUHZ6DK4%3d&risl=&pid=ImgRaw" type="video/mp4" autoPlay loop muted playsInline />
                </HeroBg>
             <HeroContent>
@@ -32,7 +36,7 @@ function Hero() {
             </HeroContent>
         </HeroContainer>
 
-        <DayOffer />
+{/*         <DayOffer /> */}
         </HeroBox>
     )
 }

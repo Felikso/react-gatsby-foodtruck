@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+/* import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
@@ -102,22 +102,6 @@ const DayOfferHeading = styled.div`
 `
 
 
-/* const DayOfferWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    justify-items: center;
-  
-    padding: 0 2rem;
-
-    @media screen and (max-width: 868px) {
-        grid-template-columns: 1fr;
-        width: 80vw;
-        margin: auto;
-    }
-` */
-
-
 const DayOfferHead = styled.div`
     text-align: right;
 `
@@ -150,3 +134,4 @@ const DayOfferBox = styled.div`
 
 
 
+ */

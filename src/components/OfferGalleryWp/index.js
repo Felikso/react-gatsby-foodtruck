@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+/* import React, { useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import {  GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
@@ -58,24 +58,7 @@ export default function CardBoxGatsbyWp({heading}) {
 
 const wpPhotos = data.HWGraphQL.galleries.nodes
 
-/* const arr = [2, 5, 4, 45, 32, 46, 78, 87, 98, 56, 23, 12];
-const chooseRandom = (arr, num = 1) => {
-   const res = [];
-   for(let i = 0; i < num; ){
-      const random = Math.floor(Math.random() * arr.length);
-      if(res.indexOf(arr[random]) !== -1){
-         continue;
-      };
-      res.push(arr[random]);
-      i++;
-   };
-   return res;
-};
- */
-/* 
-const randomFeatuted = chooseRandom(allProducts, 3)
 
-console.log(randomFeatuted); */
 
     return (
       <>
@@ -91,13 +74,6 @@ console.log(randomFeatuted); */
            data-aos-delay="0">
 
              
-{/*            <GatsbyImage
-
-key={i}
-image={item.node.childImageSharp.gatsbyImageData}
-alt={`lwowskie-smaki-oferta-zdjęcie-${i}`}
-/> */}
-
            <GatsbyImage
 
             key={i}
@@ -109,18 +85,6 @@ alt={`lwowskie-smaki-oferta-zdjęcie-${i}`}
       
     ))
   } 
-{/*             {
-    data.map.edges((item, i) => (
-     
-           <GatsbyImage
-
-            key={i}
-            image={item.image.childImageSharp.gatsbyImageData}
-            alt={`lwowskie-smaki-oferta-zdjęcie-${i}`}
-      />
-      
-    ))
-  } */}
             </OfferGalleryWpWrapper>
         </OfferGalleryWpContainer>
 </>
@@ -162,3 +126,4 @@ const AOSBox = styled.div`
 `
 
 
+ */

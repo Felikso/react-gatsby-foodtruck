@@ -22,7 +22,7 @@ function MenuCard() {
     });
 }, [])
 
-  const data = useStaticQuery(
+/*   const data = useStaticQuery(
     graphql`
       query {
         allMenuJson {
@@ -92,10 +92,11 @@ function MenuCard() {
       
     `
   )
+ */
 
+/*   const wordpressDishes = data.HWGraphQL.dishes.nodes */
 
-
-  const wordpressDishes = data.HWGraphQL.dishes.nodes
+  const wordpressDishes = wordpressDishesCoppy.dataCoppy.HWGraphQL.dishes.nodes
 
 
   const getUnique = (items, value) => {
@@ -106,30 +107,9 @@ function MenuCard() {
   };
 
 
+const nodeDish = wordpressDishes.map(item => item.dishes)
 
 
-
-/*       filterDishes = () => {
-
-        let currentDishes = [...wordpressDishes];
-        // transform values
-    
-        // filtruj category
-        if (category !=== "wszystkie") {
-          currentDishes = currentDishes.filter(product => product.category ==== category);
-        }
-
-        this.setState({
-          sortedDishes: currentDishes
-        });
-      }; */
-
-
-
-  const nodeDish = wordpressDishes.map(item => item.dishes)
-
-
-/*   const filteredNodeDish = wordpressDishes.map(item => item.dishes).filter(item => item.category === dishCategory) */
 
 let filteredNodeDish = wordpressDishes
 
@@ -144,20 +124,10 @@ if(dishCategory === "wszystkie"){
 
   categories = ["wszystkie", ...categories];
 
-/*   categories = categories.map((item, index) => (
-    <option key={index} value={item}>
-      {item}
-    </option>
-  )); */
-
     return (
         <>
 
-{/* <select
-onClick={ e => setDishCategory(e.target.value)}
->
-  {categories}
-</select> */}
+
 <MenuButtonBox>
 {
   categories.map((item, i) => (

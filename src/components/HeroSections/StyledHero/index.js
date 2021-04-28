@@ -1,22 +1,30 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
 
-
-
 import { Button } from "../../Button"
 
-import StyledBackgroundHeroSection from '../../StyledBackgroundHeroSection'
+/* import DayOffer from '../../DayOffer' */
 
-import DayOffer from '../../DayOffer'
-
-
+import BgImgBridge from '../../BgImgBridge'
 
 
 
-function StyledHero({ Video, HeroPoster, HeroTitle, HeroMotto, HeroBtnPath, HeroBtnText, sources, HeroHeight, HeroHeightMedia }) {
+
+
+function StyledHero({ 
+    Video, 
+    HeroPoster, 
+    HeroTitle, 
+    HeroMotto, 
+    HeroBtnPath, 
+    HeroBtnText, 
+    sources, 
+    HeroHeight, 
+    HeroHeightMedia,
+    bgImage
+    }) {
 
 
     return (
@@ -37,12 +45,16 @@ function StyledHero({ Video, HeroPoster, HeroTitle, HeroMotto, HeroBtnPath, Hero
             height: ${HeroHeightMedia}; 
         }
         `}>
-            <StyledHeroBg><StyledBackgroundHero
-        Tag="div"
-
-        fluid={sources}
-        backgroundColor={`#040e18`}
-      />
+            <StyledHeroBg>
+            <BgImgBridge
+             bgImage={bgImage}
+             css={`
+            height: ${HeroHeight};
+            @media screen and (max-width: 768px) {
+                height: ${HeroHeightMedia}; 
+        } 
+         }
+             `}/>
                 <VideoBg src={Video} poster={HeroPoster}type="video/mp4" autoPlay loop muted playsInline />
                </StyledHeroBg>
             <StyledHeroContent>
@@ -67,7 +79,7 @@ function StyledHero({ Video, HeroPoster, HeroTitle, HeroMotto, HeroBtnPath, Hero
             </StyledHeroContent>
         </StyledHeroContainer>
 
-        <DayOffer />
+{/*         <DayOffer /> */}
         </StyledHeroBox>
 
 

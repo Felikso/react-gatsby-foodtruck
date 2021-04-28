@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+/* import React, { useEffect } from 'react'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -79,9 +79,7 @@ export default function MenuCard() {
         <span class="menu-offer-subheader__sup-title">
           Ochota na coś smacznego?
         </span>
-{/*         <span class="menu-offer-subheader__title">
-          Nasze menu
-        </span> */}
+
       </h2>
     </header>
 
@@ -121,13 +119,7 @@ export default function MenuCard() {
             {wordpressMenu.map((item, i) => (
               <>
               <h2>{item.dishes.name}</h2>
-{/*               <GatsbyImage
-            className="image-hover-capition__img"
-            key={i}
-            image={item.featuredImage.node.sourceUrlSharp.childImageSharp.gatsbyImageData}
-            alt="cos"
-      /> */}
-              {/* <img src={item.featuredImage.node.sourceUrl}/> */}
+
               </>
             ))}
           
@@ -138,13 +130,8 @@ export default function MenuCard() {
         </ul>
       </div>
     
-
-{/*     <p class="menu-offer__action">
-      <a class="btn btn-primary" href="/restauracje">
-        Zobacz wszystko
-      </a>
-    </p> */}
   </div>
         </>
     )
 }
+ */

@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import {  GatsbyImage} from 'gatsby-plugin-image'
 
@@ -72,3 +72,4 @@ export default function CardBoxGatsby() {
 </>
     )
 }
+ */
