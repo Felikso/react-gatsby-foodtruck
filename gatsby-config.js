@@ -92,8 +92,8 @@ module.exports = {
 				url: "https://blog.ventus-trade.pl/graphql",
 /*         protocol: `https`,
         hostingWPCOM: false,
-        useACF: true, */
-/*         plugins: [
+        useACF: true,
+        plugins: [
           {
             resolve: `@draftbox-co/gatsby-wordpress-inline-images`,
             options: {
@@ -102,8 +102,8 @@ module.exports = {
               useACF: true,
             }
           }
-        ]
-			}, */
+        ] */
+			},
 		},
 /*     {
 			resolve: 'gatsby-plugin-graphql-image',
