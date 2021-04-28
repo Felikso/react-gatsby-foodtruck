@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby';
+/* import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import { BgImage, convertToBgImage } from 'gbimage-bridge';
+import { BgImage, convertToBgImage } from 'gbimage-bridge'; */
 
 import BackgroundImage from 'gatsby-background-image'
 

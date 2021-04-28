@@ -90,6 +90,9 @@ module.exports = {
 			resolve: `gatsby-source-wordpress`,
 			options: {
 				url: "https://blog.ventus-trade.pl/graphql",
+        protocol: `https`,
+        hostingWPCOM: false,
+        useACF: true,
         plugins: [
           {
             resolve: `@draftbox-co/gatsby-wordpress-inline-images`,
