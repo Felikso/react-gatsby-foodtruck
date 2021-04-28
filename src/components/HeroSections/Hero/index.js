@@ -1,48 +1,59 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button } from "../../components/Button"
-import Video from '../../assets/videos/background-menu-video.mp4'
+import { Button } from "../../Button"
+import Video from '../../../assets/videos/pierogi1.mp4'
 
-import StyledBackgroundHeroMenuSection from '../Backgrounds/StyledBackgroundHeroMenuSection'
 
-function HeroMenu() {
+import StyledBackgroundHeroSection from '../../StyledBackgroundHeroSection'
+
+import DayOffer from '../../DayOffer'
+
+function Hero() {
     return (
-        
-        <HeroMenuContainer>
-            <HeroMenuBg><StyledBackgroundHeroMenuSection />
+
+        <HeroBox>
+        <HeroContainer>
+            <HeroBg><StyledBackgroundHeroSection />
                 <VideoBg src={Video} poster="https://th.bing.com/th/id/R579b4552f248f5f3b8c22ec8de678f6d?rik=CZn5ZpmoPRhhWA&riu=http%3a%2f%2f1.s.dziennik.pl%2fpliki%2f2465000%2f2465139-lew-900-665.jpg&ehk=rOGUdngXo%2b2ZE6G%2bXYh1k730AK3lbwEv%2fptsUHZ6DK4%3d&risl=&pid=ImgRaw" type="video/mp4" autoPlay loop muted playsInline />
-               </HeroMenuBg>
-            <HeroMenuContent>
-                <HeroMenuItems>
-                    <HeroMenuH1>
-                        Nasze Menu
-                    </HeroMenuH1>
-                    <Button primary="true" round="true" big="true" to="/ofrta">
-                        Sprawdź Ofertę
+               </HeroBg>
+            <HeroContent>
+                <HeroItems>
+                    <HeroH1>
+                        Lwowskie Smaki
+                    </HeroH1>
+                    <HeroP>
+                        Szybko, Smacznie, Świeżo
+                    </HeroP>
+                    <Button primary="true" round="true" big="true" to="/menu">
+                        Sprawdź Menu
                     </Button>
-                </HeroMenuItems>
-            </HeroMenuContent>
-        </HeroMenuContainer>
+                </HeroItems>
+            </HeroContent>
+        </HeroContainer>
+
+        <DayOffer />
+        </HeroBox>
     )
 }
 
-export default HeroMenu
+export default Hero
 
-const HeroMenuContainer = styled.div`
+const HeroBox = styled.div`
+    position: relative;
+    min-height: 100vh;
+`
+
+const HeroContainer = styled.div`
     background: #0c0c0c;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
     padding: 0 1rem;
     position: relative;
     margin-top: -80px;
     color: #fff;
-
-    @media screen and (max-width: 768px) {
-        height: 60vh;
-    }
 
     :before {
         content: "";
@@ -64,19 +75,15 @@ const HeroMenuContainer = styled.div`
 
 `
 
-const HeroMenuBg = styled.div`
+const HeroBg = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     width: 100%;
-    height: 70vh;
+    height: 100%;
     overflow: hidden;
-
-    @media screen and (max-width: 768px) {
-        height: 60vh;
-    }
 `
 
 
@@ -91,14 +98,14 @@ const VideoBg = styled.video`
     }
 `
 
-const HeroMenuContent = styled.div`
+const HeroContent = styled.div`
     z-index: 3;
     height: calc(100vh - 80px);
     max-height: 100%;
     padding: 0rem calc((100vh - 1300px) /2);    
 `
 
-const HeroMenuItems = styled.div`
+const HeroItems = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,10 +119,16 @@ const HeroMenuItems = styled.div`
     font-weight: bold;
 `
 
-const HeroMenuH1 = styled.h1`
+const HeroH1 = styled.h1`
     font-size: clamp(1.5rem, 6vh, 4rem);
     margin-bottom: 1.5rem;
     letter-spacing: 3px;
     padding: 0 1rem;
+`
+
+const HeroP = styled.p`
+    font-size: clamp(1rem, 3vw, 3rem);
+    margin-bottom: 2rem;
+    font-weight: 400;
 `
 

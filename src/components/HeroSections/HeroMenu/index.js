@@ -1,35 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button } from "../../components/Button"
-import Video from '../../assets/videos/background-menu-video.mp4'
+import { Button } from "../../Button"
+import Video from '../../../assets/videos/background-menu-video.mp4'
 
-import StyledBackgroundHeroOfferSection from '../Backgrounds/StyledBackgroundHeroOfferSection'
+import StyledBackgroundHeroMenuSection from '../../Backgrounds/StyledBackgroundHeroMenuSection'
 
-function HeroOffer() {
+function HeroMenu() {
     return (
         
-        <HeroOfferContainer>
-            <HeroOfferBg><StyledBackgroundHeroOfferSection />
+        <HeroMenuContainer>
+            <HeroMenuBg><StyledBackgroundHeroMenuSection />
                 <VideoBg src={Video} poster="https://th.bing.com/th/id/R579b4552f248f5f3b8c22ec8de678f6d?rik=CZn5ZpmoPRhhWA&riu=http%3a%2f%2f1.s.dziennik.pl%2fpliki%2f2465000%2f2465139-lew-900-665.jpg&ehk=rOGUdngXo%2b2ZE6G%2bXYh1k730AK3lbwEv%2fptsUHZ6DK4%3d&risl=&pid=ImgRaw" type="video/mp4" autoPlay loop muted playsInline />
-               </HeroOfferBg>
-            <HeroOfferContent>
-                <HeroOfferItems>
-                    <HeroOfferH1>
-                        O naszej ofercie
-                    </HeroOfferH1>
+               </HeroMenuBg>
+            <HeroMenuContent>
+                <HeroMenuItems>
+                    <HeroMenuH1>
+                        Nasze Menu
+                    </HeroMenuH1>
                     <Button primary="true" round="true" big="true" to="/ofrta">
                         Sprawdź Ofertę
                     </Button>
-                </HeroOfferItems>
-            </HeroOfferContent>
-        </HeroOfferContainer>
+                </HeroMenuItems>
+            </HeroMenuContent>
+        </HeroMenuContainer>
     )
 }
 
-export default HeroOffer
+export default HeroMenu
 
-const HeroOfferContainer = styled.div`
+const HeroMenuContainer = styled.div`
     background: #0c0c0c;
     display: flex;
     justify-content: center;
@@ -64,7 +64,7 @@ const HeroOfferContainer = styled.div`
 
 `
 
-const HeroOfferBg = styled.div`
+const HeroMenuBg = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
@@ -91,14 +91,14 @@ const VideoBg = styled.video`
     }
 `
 
-const HeroOfferContent = styled.div`
+const HeroMenuContent = styled.div`
     z-index: 3;
     height: calc(100vh - 80px);
     max-height: 100%;
     padding: 0rem calc((100vh - 1300px) /2);    
 `
 
-const HeroOfferItems = styled.div`
+const HeroMenuItems = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,11 +112,10 @@ const HeroOfferItems = styled.div`
     font-weight: bold;
 `
 
-const HeroOfferH1 = styled.h1`
+const HeroMenuH1 = styled.h1`
     font-size: clamp(1.5rem, 6vh, 4rem);
     margin-bottom: 1.5rem;
     letter-spacing: 3px;
     padding: 0 1rem;
 `
-
 

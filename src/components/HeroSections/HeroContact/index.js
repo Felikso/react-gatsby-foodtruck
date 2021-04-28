@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button } from "../../components/Button"
-import Video from '../../assets/videos/background-menu-video.mp4'
+import { Button } from "../../Button"
+import Video from '../../../assets/videos/background-menu-video.mp4'
 
-import StyledBackgroundHeroContactSection from '../Backgrounds/StyledBackgroundHeroContactSection'
+import StyledBackgroundHeroContactSection from '../../Backgrounds/StyledBackgroundHeroContactSection'
 
 function HeroContact() {
     return (

@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import { useHasBeenVisible } from '../hooks/useVisibility';
 import Layout from "../components/Layout/index.js"
 import Seo from "../components/seo"
-import Hero from '../components/Hero'
+import Hero from '../components/HeroSections/Hero'
 /* import OfferIntro from "../components/OfferIntro" */
 import Testimonials from "../components/Testimonials"
 import Stats from "../components/Stats"
