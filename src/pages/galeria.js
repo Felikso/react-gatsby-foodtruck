@@ -8,6 +8,7 @@ import Layout from "../components/Layout/index.js"
 import Seo from "../components/seo"
 //
 import OfferGalleryWp from '../components/OfferGalleryWp'
+import OfferGalleryWpLightBox from '../components/OfferGalleryWpLightBox'
 //
 import FullWidthSection from '../components/FullWidthSection';
 import Video from '../assets/videos/pierogi1.mp4'
@@ -73,7 +74,7 @@ const bgImage = convertToBgImage(image);
       
       
       />
-      <OfferGalleryWp/>
+      <OfferGalleryWpLightBox/>
       {hasScrolled || isScrolling ? (
         <>
 

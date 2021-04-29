@@ -153,6 +153,8 @@ if(dishCategory === "wszystkie"){
 
   categories = ["wszystkie", ...categories];
 
+/*   console.log(categories) */
+
     return (
         <>
 
@@ -193,7 +195,41 @@ if(dishCategory === "wszystkie"){
 
               </MenuBox>
             ))}
-          
+
+
+
+{
+              categories.map((item, i) => {
+                console.log(item)
+                const filtered = filteredNodeDish.filter(item => item === item.dishes.category)
+                console.log(filtered)
+                console.log(filteredNodeDish)
+                return(
+
+                 
+                  <>
+                   <h1>{item}</h1>
+                   {
+                  
+                    filteredNodeDish.filter(item => item === item.dishes.category).map((item, i)=> {
+
+                      return(
+                        <>
+
+                        <p>{item.dishes.name} </p>
+
+                        </>
+                      )
+                    })
+                   }
+                  </>
+                )
+
+              })
+  }
+
+
+
 
           
            
