@@ -4,6 +4,9 @@ import { Link } from 'gatsby'
 
 import { menuData } from "../../data/MenuData"
 
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -27,7 +30,7 @@ const Ul = styled.ul`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(AniLink)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -46,7 +49,7 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
         {menuData.map((item, index)=> (
-          <NavLink to={item.link} key={index}>
+          <NavLink to={item.link} key={index} swipe top="entry">
             {item.title}
           </NavLink>
         ))}

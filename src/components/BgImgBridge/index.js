@@ -39,7 +39,7 @@ export default BgImgBridge;
 
 
 const StyledBackgroundImg = styled(BackgroundImage)`
-display: none;
+
 
 @media screen and (max-width: 768px) {
   width: 100%;

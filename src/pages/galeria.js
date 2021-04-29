@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { TransitionLink } from "gatsby-plugin-transitions";
 import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image';
 import { convertToBgImage } from 'gbimage-bridge';
@@ -11,6 +12,9 @@ import OfferGalleryWp from '../components/OfferGalleryWp'
 import FullWidthSection from '../components/FullWidthSection';
 import Video from '../assets/videos/pierogi1.mp4'
 import StyledHero from '../components/HeroSections/StyledHero'
+
+//transitions
+/* import PageTransition from 'gatsby-plugin-page-transitions'; */
 
 
 function GalleryPage() {
@@ -39,6 +43,20 @@ const bgImage = convertToBgImage(image);
 
 
   return(
+/*     <PageTransition
+    defaultStyle={{
+      transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+      left: '100%',
+      position: 'absolute',
+      width: '100%',
+    }}
+    transitionStyles={{
+      entering: { left: '0%' },
+      entered: { left: '0%' },
+      exiting: { left: '100%' },
+    }}
+    transitionTime={500}
+  > */
     <Layout>
       <Seo title="Home" />
       <StyledHero
@@ -65,6 +83,7 @@ const bgImage = convertToBgImage(image);
       )}
 
     </Layout>
+/*     </PageTransition> */
   )
   
 

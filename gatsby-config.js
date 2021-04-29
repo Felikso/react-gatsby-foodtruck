@@ -63,7 +63,6 @@ module.exports = {
         path: `${__dirname}/src/products`,
       },
     },
-    `gatsby-plugin-page-transitions`,
     `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-plugin-page-transitions',
@@ -105,6 +104,12 @@ module.exports = {
         ] */
 			},
 		},
+/*     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: `${__dirname}/src/components/Layout/index.js`,
+      },
+    }, */
 /*     {
 			resolve: 'gatsby-plugin-graphql-image',
 			options: {
@@ -154,7 +159,8 @@ module.exports = {
 
 
     `gatsby-transformer-ffmpeg`,
-    `gatsby-plugin-smoothscroll`
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-transition-link`
 
   ],
 }

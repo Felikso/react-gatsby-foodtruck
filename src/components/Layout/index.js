@@ -1,4 +1,5 @@
-import * as React from "react"
+import React, { useState }  from "react"
+import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
 
 import { GlobalStyle } from "../styles/GlobalStyles"
 import Footer from "../Footer/index.js"
@@ -6,7 +7,22 @@ import Navbar from '../Nav/Navbar';
 import ScrollBtn from '../ScrollBtn'
 
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
+  return (
+<>
+        <GlobalStyle />
+        <Navbar />
+          {children}
+          <ScrollBtn showBelow={250} />
+        <Footer />
+</>
+  );
+};
+
+export default Layout;
+
+
+/* const Layout = ({ children }) => {
 
 
   return (
@@ -22,3 +38,4 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
+ */
